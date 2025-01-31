@@ -1,0 +1,95 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+    <Style x:Key="ButtonTerm" TargetType="Button">
+        <Setter Property="Background" Value="#4D8FAC"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="white"/>
+        <Setter Property="BorderBrush" Value="#4D8FAC"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextInput" TargetType="TextBox">
+        <Setter Property="Background" Value="DarkGray"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="white"/>
+        <Setter Property="BorderBrush" Value="DarkGray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ButtonLetters" TargetType="Button">
+        <Setter Property="Background" Value="DarkGray"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="BorderBrush" Value="white"/>
+        <Setter Property="Foreground" Value="white"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="170"/>
+        
+        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Background" Value="#4D8FAC"/>
+            </Trigger>
+        </Style.Triggers>
+
+       
+    </Style>
+
+    <Style x:Key="ButtonOdustani" TargetType="Button">
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="FontSize" Value="12"/>
+        
+        <Setter Property="Foreground" Value="black"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="80"/>
+
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Background" Value="DarkRed"/>
+                <Setter Property="Foreground" Value="white"/>
+            </Trigger>
+        </Style.Triggers>
+
+
+    </Style>
+
+
+
+    <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+        <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled"  
+             Value="False">
+                <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+        
+
+
+</ResourceDictionary>
